@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, 
+    initial-scale=1.0"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js "></script>
+    <script src="js/modernizr.custom.js"></script>
+    <script src="js/jquery.dlmenu.js"></script>
+
+    <title>Izradi 3D</title>
+  </head>
+  <body>
+    <header>
+      <div id="responsive-main-menu">
+        <nav>
+          <div>
+            <a class="logo"><img src="images/logo.png" /></a>
+          </div>
+          <div class="menu">
+            <ul>
+              <li><a href=" #responsive-main-menu">Naslovna</a></li>
+              <li><a href="#about_us">O nama</a></li>
+              <li><a href="#middlewrap">Usluge</a></li>
+              <li><a href="#form">Kontakt</a></li>
+              <!--<button class="button_1"><a>Javi nam se</a></button>-->
+            </ul>
+          </div>
+
+          <div>
+            <button class="button-onama" onclick="location.href='#' ">
+              Javi nam se
+            </button>
+          </div>
+          <div id="dl-menu" class="dl-menuwrapper">
+            <button class="dl-trigger">Open Menu</button>
+            <ul class="dl-menu">
+              <li><a href="#headerid">Home</a></li>
+              <li><a href="#about_us">About</a></li>
+              <li><a href="#exp">Experties</a></li>
+              <li><a href="#location">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <script>
+        $(function () {
+          $("#dl-menu").dlmenu();
+        });
+      </script>
+    </header>
+    <div id="container-wrap">
+      <div id="container">
+        <div class="text">
+          <h3>Izradi svoj 3D print</h3>
+          <h1>Koristimo najnoviju tehnologiju</h1>
+          <button onclick="location.href='#' ">
+            <a href="#">Pročitaj više</a>
+          </button>
+        </div>
+        <div class="picture"><img src="images/printeri.jpg" /></div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        $(window).bind("scroll", function () {
+          var navHeight = $(window).height() - 70;
+          if ($(window).scrollTop() > navHeight) {
+            $("nav").addClass("fixed");
+          } else {
+            $("nav").removeClass("fixed");
+          }
+        });
+      });
+      $(document).ready(function () {
+        $("a").on("click", function (event) {
+          if (this.hash !== "") {
+            event.preventDefault();
+
+            var hash = this.hash;
+
+            $("html, body").animate(
+              {
+                scrollTop: $(hash).offset().top,
+              },
+              800,
+              function () {
+                window.location.hash = hash;
+              }
+            );
+          } //
+        });
+      });
+    </script>
+    <div id="wrapper-wrap">
+      <div class="wrapper" id="wrapper_wrap">
+        <div class="carousel owl-carousel" id="wrapper">
+          <div class="card card-1"><img src="images/3dprint.jpg" /></div>
+          <div class="card card-2"><img src="images/3dprint1.jpg" /></div>
+          <div class="card card-3"><img src="images/3dprint3.jpg" /></div>
+          <div class="card card-4"><img src="images/rad8.jpg" /></div>
+          <div class="card card-5"><img src="images/rad9.jpg" /></div>
+          <div class="card card-6"><img src="images/rad10.jpg" /></div>
+          <div class="card card-7"><img src="images/rad6.jpg" /></div>
+        </div>
+      </div>
+    </div>
+    <script>
+      $(".carousel").owlCarousel({
+        margin: 10,
+        loop: true,
+        autoplay: true,
+        autoplayTimeout: 2000, //2000 ms = 2 sec
+        autoplayHoverPause: true,
+        responsive: {
+          0: {
+            items: 1,
+            nav: false,
+          },
+
+          600: {
+            items: 2,
+            nav: false,
+          },
+
+          1000: {
+            items: 4,
+            nav: false,
+          },
+        },
+      });
+    </script>
+    <div id="middlewrap">
+      <div class="usluge-wrap" id="wrap_usluge">
+        <ul>
+          <li class="usluge usluge-down">
+            <img src="images/3d-printer.png" />
+            <div>
+              <h3>Litophane</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Exercitationem facilis ea,
+              </p>
+            </div>
+          </li>
+        </ul>
+        <ul>
+          <li class="usluge usluge-down">
+            <img src="images/sculpture.png" />
+            <div class="usluge-fonts skulpture">
+              <h3>Skulpture</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Exercitationem facilis ea,
+              </p>
+            </div>
+          </li>
+        </ul>
+        <ul>
+          <li class="usluge usluge-down toy">
+            <img src="images/toy.png" />
+            <div>
+              <h3>Figurice</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Exercitationem facilis ea,
+              </p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="construction">
+          <ul>
+            <li class="usluge construction">
+              <img src="images/construction.png" />
+              <div>
+                <h3>Igračke</h3>
+                <p>
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                  Exercitationem facilis ea,
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <ul>
+          <li class="usluge jewelry">
+            <img src="images/jewelry.png" />
+            <div class="usluge-fonts">
+              <h3>Nakit</h3>
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Exercitationem facilis ea,
+              </p>
+            </div>
+          </li>
+        </ul>
+        <ul>
+          <li class="usluge print">
+            <img src="images/ostalo.png" />
+            <div>
+              <h3>I mnogo toga!</h3>
+              <p>Imaš ideju? <a href="#">Javi nam se!</a></p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="about-us-wrap" id="onama">
+      <div class="about-us" id="about_us">
+        <div class="about-us-2">
+          <h2>O nama</h2>
+
+          <p>
+            Bavimo se profesionalnim izrađivanjem 2D i 3D modela, te printanjem
+            modela u plastici različitih boja i svojstava po želji
+            naručitelja.<br />Svakodnevne stvari od plastike, ukrase, dodatke i
+            slično, možemo isprintati pomoću naših 3D printera.<br />
+            <span> s Vašim detaljima i dodatcima po vlastitom izboru.</span>
+          </p>
+          <!--Modele možete naručiti kod nas putem email-a uz opis ili sliku izgleda samog modela te vam mi dostavimo par opcija od kojih možete izabrati koja se vama najviše sviđa. </p>
+        <p>Ukoliko imate vlastiti model napravljen, mora biti spremljen u STL, te ga možete poslati nama putem email-a, te vam mi prosljeđujemo nazad cijenu i vrijeme potrebno za printanje.</p> 
+          <button
+            class="button-read-more"
+            onclick="location.href='onama.html' "
+          >
+            <a href="onama.html">Pročitaj više</a>
+          </button>-->
+        </div>
+        <div class="about-us-1">
+          <img src="images/aboutus.png" />
+        </div>
+      </div>
+    </div>
+    <!-- <div class="form-container" id="form">
+      <h3>Pošalji upit</h3>
+      <div class="form-field">
+        <div class="form-group">
+          <label for="fname"></label>
+          <input
+            type="text"
+            name="fname"
+            placeholder="Ime I Prezime"
+            class="form-control form-control-lg"
+          />
+        </div>
+        <div class="form-group">
+          <label for="lname"></label>
+          <input
+            type="email"
+            name="lname"
+            placeholder="Email"
+            class="form-control form-control-lg"
+          />
+        </div>
+      </div>
+       <textarea
+        name="poruka"
+        value="Poruka"
+        rows="10"
+        cols="30"
+        id="poruka"
+        placeholder="Poruka"
+      ></textarea>
+      <button class="button-form" type="submit">Pošalji</button>
+    </div>
+    -->
+    <div class="kontakt_forma" id="form">
+      <h4>Izradi3D</h4>
+      <ul>
+        <li>Osijek, Hrvatska 31000 Osijek</li>
+        <li>
+          <a href="mailto:Info@izradi3d.eu" class="mail">info@izradi3d.eu </a>
+        </li>
+        <li>
+          Luka,(WhatsApp) tel:
+          <a
+            href="tel:+38531205555
+  "
+            class="tel"
+            >+38531205555
+          </a>
+        </li>
+        <li>
+          Ivan,(WhatsApp) tel:
+          <a
+            href="tel:+38531205555
+  "
+            class="tel"
+            >+38531205555
+          </a>
+        </li>
+      </ul>
+      <div class="face_insta">
+        <a
+          href="https://www.facebook.com/izradi3d"
+          class="fa fa-facebook"
+          target="_blank"
+        ></a>
+        <a
+          href="https://www.instagram.com/izradi3d/"
+          class="fa fa-instagram"
+          target="_blank"
+        ></a>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>&copy; Izradi 3D|Napravio Kristian Lang</p>
+    </footer>
+  </body>
+</html>
